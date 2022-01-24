@@ -24,7 +24,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.CustomVi
 
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.gallery_list_row, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.gallery_list_row, parent, false);
         return new GalleryAdapter.CustomViewHolder(view);
     }
 
@@ -53,6 +54,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.CustomVi
 
     static class CustomViewHolder extends RecyclerView.ViewHolder {
         final ImageView imageResource;
+
         CustomViewHolder(View itemView) {
             super(itemView);
             this.imageResource = (ImageView) itemView.findViewById(R.id.image_resource);
